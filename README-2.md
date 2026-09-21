@@ -7,22 +7,7 @@ swapping, no MT Manager.
 This is a small local website: it runs on your own computer or phone and
 opens in your browser. It never uploads anything anywhere.
 
----
 
-## What's included in this download
-
-```
-aod_theme_manager/
-  app.py                  <- the app (just run this)
-  templates/, static/     <- the web page itself
-  themes/                 <- pre-loaded theme files, ready to pick from
-  original_source/apps/   <- the pristine AOD app data these get inserted into
-```
-
-You don't need to set any of this up — `themes/` and `original_source/` are
-already populated. Just unzip and run.
-
----
 
 ## Requirements
 
@@ -53,7 +38,7 @@ already populated. Just unzip and run.
 7. Click theme previews to select up to 20, then click **Generate Backup**,
    then **Download backup**. The file lands in the `output/` folder inside
    this project (also linked directly from the download button).
-
+ 
 ---
 
 ## Setup — Android (via Termux)
@@ -99,10 +84,12 @@ You'll do this entirely on your phone, no PC needed.
 ---
 
 ## Restoring the backup on your phone
-
-1. Copy the generated `.bak` file onto your phone (Windows users: transfer
-   it over USB or however you normally move files across).
-2. Open **Settings → Backup & restore** (or wherever your HyperOS version
+1.If its your first time restoring through the aod theme manager, first restore the provided "Always-on display(com.miui.aod).bak" and descript.xml file in
+   folder 20240405. If the folder doesn't exist, create a new folder in AllBackup named  "20240405"
+    Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
+1. Copy the downloaded custom_aod_backup.bak file to your phone (in case of windows and internal storage/MIUI/backup/AllBackup/20240405. Rename the file to              "Always-on display(com.miui.aod).bak" exactly without quotation marks.Also copy the descript.xml file inside the same folder.
+   If the folder doesn't exist, create a new folder in AllBackup named  "20240405".
+2. Open **Settings → About phone → Backup & restore** (or wherever your HyperOS version
    keeps local backup restore).
 3. Restore from that file.
 4. Open the AOD theme picker — your 20 new themes should appear in place of
@@ -112,8 +99,6 @@ You'll do this entirely on your phone, no PC needed.
 
 ## Notes
 
-- Only the **first 20** theme slots get replaced; the last 6 are left
-  untouched.
 - Closing the terminal/Termux window stops the app. Just re-run
   `python app.py` to start it again later — your selections aren't saved
   between runs, so you'll re-pick each time.
@@ -126,7 +111,8 @@ You'll do this entirely on your phone, no PC needed.
   `python` in the commands above.
 - **Page won't load**: make sure the terminal/Termux window is still open
   and showing `Running on http://127.0.0.1:5000` with no errors.
-- **Backup doesn't restore correctly**: make sure you're using the
-  unmodified `themes/` and `original_source/` folders that came with this
-  download — swapping in your own without matching the expected structure
-  can break the restore.
+- **Backup doesn't restore correctly**: 
+- Check that the backup file is named correctly if it fails to restore.
+- If the backup restores but the selected themes don't appear, then restore the orignal.bak file provided and then try again.
+- if the themes still don't appear in the AOD gallery, then report the issue.
+  
