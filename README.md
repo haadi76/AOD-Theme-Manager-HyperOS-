@@ -1,8 +1,7 @@
 # AOD Theme Manager (HyperOS)
 
 Pick 20 Always-On Display themes from a visual preview grid, and get back a
-ready-to-restore `.bak` backup with those themes applied — no manual file
-swapping, no MT Manager.
+ready-to-restore `.bak` backup with those themes applied.
 
 This is a small local website: it runs on your own computer or phone and
 opens in your browser. It never uploads anything anywhere.
@@ -20,22 +19,23 @@ opens in your browser. It never uploads anything anywhere.
 
 1. Install Python from [python.org](https://www.python.org/downloads/) if
    you don't already have it. During install, tick **"Add Python to PATH"**.
-2. Unzip this folder anywhere (e.g. your Desktop).
-3. Open **Command Prompt** or **PowerShell** in that folder (Shift + Right-click
+2. Download the Latest "AOD Theme Manager.zip" as well as the "Always-on display(com.miui.aod).bak" and "descript.xml" files
+3. Unzip this AOD Theme Manager anywhere (e.g. your Desktop).
+4. Open **Command Prompt** or **PowerShell** in that folder (Shift + Right-click
    inside the folder → "Open PowerShell window here", or type `cd` to it).
-4. Install Flask:
+5. Install Flask:
    ```
    pip install flask
    ```
-5. Run the app:
+6. Run the app:
    ```
    python app.py
    ```
-6. Open your browser and go to:
+7. Open your browser and go to:
    ```
    http://127.0.0.1:5000
    ```
-7. Click theme previews to select up to 20, then click **Generate Backup**,
+8. Click theme previews to select up to 20, then click **Generate Backup**,
    then **Download backup**. The file lands in the `output/` folder inside
    this project (also linked directly from the download button).
  
@@ -87,11 +87,9 @@ You'll do this entirely on your phone, no PC needed.
 1.If its your first time restoring through the aod theme manager, first restore the provided "Always-on display(com.miui.aod).bak" and descript.xml file in
    folder 20240405. If the folder doesn't exist, create a new folder in AllBackup named  "20240405"
     Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
-1. Copy the downloaded custom_aod_backup.bak file to your phone (in case of windows and internal storage/MIUI/backup/AllBackup/20240405. Rename the file to              "Always-on display(com.miui.aod).bak" exactly without quotation marks.Also copy the descript.xml file inside the same folder.
+2. Copy the downloaded custom_aod_backup.bak file to your phone (in case of windows and internal storage/MIUI/backup/AllBackup/20240405. Rename the file to              "Always-on display(com.miui.aod).bak" exactly without quotation marks.Also copy the descript.xml file inside the same folder.
    If the folder doesn't exist, create a new folder in AllBackup named  "20240405".
-2. Open **Settings → About phone → Backup & restore** (or wherever your HyperOS version
-   keeps local backup restore).
-3. Restore from that file.
+3. Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
 4. Open the AOD theme picker — your 20 new themes should appear in place of
    the originals.
 
