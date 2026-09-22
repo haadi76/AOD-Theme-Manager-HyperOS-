@@ -55,26 +55,33 @@ You'll do this entirely on your phone, no PC needed.
    ```
    Approve the storage permission popup — this lets Termux see your phone's
    normal storage (Downloads, etc.).
-3. Move the downloaded zip into your phone's **Downloads** folder if it
-   isn't already there, then in Termux:
-   ```
-   cd ~
-   unzip /sdcard/Download/aod_theme_manager.zip
-   cd aod_theme_manager
-   ```
-4. Install Flask:
+   
+3. Install Flask:
    ```
    pip install flask
    ```
-5. Run the app:
+4. Install wget:
+   ```
+   pkg install python git wget unzip
+   ```
+5. Download the app:
+   
+   ```
+   wget https://github.com/haadi76/AOD-  Theme-Manager-HyperOS-/releases/download/V1.0-Alpha/aod_theme_manager.zip
+   ```
+6. Unzip the app
+   ```
+   unzip aod_theme_manager.zip
+   ```
+7.run the app
    ```
    python app.py
    ```
-6. Open your phone's browser (Chrome, etc.) and go to:
+8. Open your phone's browser (Chrome, etc.) and go to:
    ```
    http://127.0.0.1:5000
    ```
-7. Select up to 20 themes and generate as above. The finished file is saved
+9. Select up to 20 themes and generate as above. The finished file is saved
    inside Termux's own storage, at `output/custom_aod_backup.bak` — copy it
    out to shared storage so you can restore it via Settings:
    ```
@@ -84,13 +91,18 @@ You'll do this entirely on your phone, no PC needed.
 ---
 
 ## Restoring the backup on your phone
-1.If its your first time restoring through the aod theme manager, first restore the provided "Always-on display(com.miui.aod).bak" and descript.xml file in
-   folder 20240405. If the folder doesn't exist, create a new folder in AllBackup named  "20240405"
-    Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
-2. Copy the downloaded custom_aod_backup.bak file to your phone (in case of windows and internal storage/MIUI/backup/AllBackup/20240405. Rename the file to              "Always-on display(com.miui.aod).bak" exactly without quotation marks.Also copy the descript.xml file inside the same folder.
-   If the folder doesn't exist, create a new folder in AllBackup named  "20240405".
-3. Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
-4. Open the AOD theme picker — your 20 new themes should appear in place of
+1.If its your first time restoring through the aod theme manager, first restore the provided "Always-on display(com.miui.aod).bak" and descript.xml file in folder 20240405. 
+
+If the folder doesn't exist, create a new folder in AllBackup named  "20240405"
+Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
+    
+2. Copy the downloaded custom_aod_backup.bak file to your phone (in case of windows and internal storage/MIUI/backup/AllBackup/20240405. Rename the file to "Always-on display(com.miui.aod).bak" exactly without quotation marks. Also copy the descript.xml file inside the same folder.
+
+If the folder doesn't exist, create a new folder in AllBackup named  "20240405".
+
+4. Open **Settings → About phone → Backup & restore → phone → restore and then select the one file named february 19 10:42 am** and then restore.
+
+5. Open the AOD theme picker — your 20 new themes should appear in place of
    the originals.
 
 ---
