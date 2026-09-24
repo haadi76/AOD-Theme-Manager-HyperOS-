@@ -67,7 +67,7 @@ You'll do this entirely on your phone, no PC needed.
 5. Download the app:
    
    ```
-   wget https://github.com/haadi76/AOD-  Theme-Manager-HyperOS-/releases/download/V1.0-Alpha/aod_theme_manager.zip
+   wget https://github.com/haadi76/AOD-Theme-Manager-HyperOS-/releases/latest/download/aod_theme_manager.zip
    ```
 6. Unzip the app
    ```
